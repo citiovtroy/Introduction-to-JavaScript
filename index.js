@@ -69,8 +69,45 @@ console.log(add(31)(7));
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight, age){
+    
+    if (age >= 1 && weight <=5) {
+        rawFood = weight * 0.05;
+        return rawFood;
+    }
+    
+    else if (weight => 6 && weight <= 10){
+        return weight * 0.04;
+        
+    }
+    else if (weight => 11 && weight <= 15){
+        return weight * 0.03;
+        
+    }
+    else if (weight => 15){
+        return weight * 0.02;
+       
+    }
 
+    if (age <= 0.11 && weight <=0.10) {
+        rawFood = weight * 0.10;
+        return rawFood;
+    }
+    
+    else if (age <= 0.07 && weight <= 0.05){
+        return weight * 0.05;
+        
+    }
+    else if (weight <= 0.11 && weight <= 0.04){
+        return weight * 0.04;
+        
+    }
+       
+    
 
+        
+}
+    console.log(dogFeeder (15, 1));
 
 
 /************************************************************** Task 4 **************************************************************/
