@@ -80,7 +80,15 @@ console.log(add(31)(7));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+var computerChoice = Math.random();
+if (computerChoice < 0.33) {
+    computerChoice = "rock";
+} else if(computerChoice <= 0.66) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissors";
+}
+  console.log(computerChoice);
   
 
 /************************************************************** Task 5 **************************************************************/
