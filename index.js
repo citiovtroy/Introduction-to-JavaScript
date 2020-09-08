@@ -41,7 +41,13 @@ function multiply (a) {
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function add (age) {
+    return function (dogYears) {
+        return age + dogYears;
+    }
+}
 
+console.log(add(31)(7));
 
 
 
@@ -81,13 +87,17 @@ function multiply (a) {
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+var kilometers = 1.60934;
+var miles = 1;
+    console.log(kilometers=miles);
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+var feet = 1;
+var centimeters = 30.48;
+    console.log(feet=centimeters);
 
 
 
@@ -96,7 +106,28 @@ function multiply (a) {
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+function annoyingSong() {  
+    var bottles;
+    var bottlesLeft;
+    for (i = 99; i >= 1; i--) {
+      if (i == 1) {
+        bottles = "bottle";
+        bottlesLeft = "No bottles of soda on the wall!";
+      } 
+      
+      else {
+        bottles = "bottles";
+        bottlesLeft = i - 1 + " bottles of soda on the wall!";
+      } 
+      
+      console.log(i+ " " + bottles + " of soda on the wall,");
+      console.log(i+ " " + bottles + " of soda,");
+      console.log("Take one down, pass it around,");
+      console.log(bottlesLeft);
+      } 
+      
+  }
+  console.log(annoyingSong());
 
 
 
