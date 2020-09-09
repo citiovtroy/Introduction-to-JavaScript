@@ -185,8 +185,24 @@ function annoyingSong() {
 //60s should be D 
 //and anything below 60 should be F
   
-
+var grades = Math.floor(Math.random() * 100) + 1;{
+ 
+}
   
+    if(grades <= 59){
+        console.log("F");
+    }else if(grades == 60 || grades <=69){
+        console.log("D");
+    }else if(grades == 70 || grades <=79){
+        console.log("C");
+    }else if(grades == 80 || grades <=89){
+        console.log("B");
+    }else if(grades == 90 || grades <=100){
+        console.log("A");
+        
+    }
+
+        console.log(grades);  
   
 
 /************************************************************** Stretch **************************************************************/
