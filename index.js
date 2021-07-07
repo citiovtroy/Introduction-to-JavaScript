@@ -1,25 +1,39 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
+var votingAge = '> 18';
+    console.log (true);
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+var x = 1;
+var y = 10;
 
+    if(x == 1) {;
+        x = y
+        console.log (x);
+    }
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+const year = "1999";
+    console.log (1999);
 
 
 
 //Task d: Write a function to multiply a*b 
 
-
+function multiply (a) {
+    return function (b) {
+      return a * b;
+    };
+  };
+  
+  console.log(multiply(15)(2));
 
 
 
@@ -27,7 +41,13 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function add (age) {
+    return function (dogYears) {
+        return age + dogYears;
+    }
+}
 
+console.log(add(31)(7));
 
 
 
@@ -49,8 +69,45 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight, age){
+    
+    if (age >= 1 && weight <=5) {
+        rawFood = weight * 0.05;
+        return rawFood;
+    }
+    
+    else if (weight => 6 && weight <= 10){
+        return weight * 0.04;
+        
+    }
+    else if (weight => 11 && weight <= 15){
+        return weight * 0.03;
+        
+    }
+    else if (weight => 15){
+        return weight * 0.02;
+       
+    }
 
+    if (age <= 0.11 && weight <=0.10) {
+        rawFood = weight * 0.10;
+        return rawFood;
+    }
+    
+    else if (age <= 0.07 && weight <= 0.05){
+        return weight * 0.05;
+        
+    }
+    else if (weight <= 0.11 && weight <= 0.04){
+        return weight * 0.04;
+        
+    }
+       
+    
 
+        
+}
+    console.log(dogFeeder (15, 1));
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -60,20 +117,32 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+var computerChoice = Math.random();
+if (computerChoice < 0.33) {
+    computerChoice = "rock";
+} else if(computerChoice <= 0.66) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissors";
+}
+  console.log(computerChoice);
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+var kilometers = 1.60934;
+var miles = 1;
+    console.log(kilometers=miles);
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+var feet = 1;
+var centimeters = 30.48;
+    console.log(feet=centimeters);
 
 
 
@@ -82,7 +151,28 @@
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+function annoyingSong() {  
+    var bottles;
+    var bottlesLeft;
+    for (i = 99; i >= 1; i--) {
+      if (i == 1) {
+        bottles = "bottle";
+        bottlesLeft = "No bottles of soda on the wall!";
+      } 
+      
+      else {
+        bottles = "bottles";
+        bottlesLeft = i - 1 + " bottles of soda on the wall!";
+      } 
+      
+      console.log(i+ " " + bottles + " of soda on the wall,");
+      console.log(i+ " " + bottles + " of soda,");
+      console.log("Take one down, pass it around,");
+      console.log(bottlesLeft);
+      } 
+      
+  }
+  console.log(annoyingSong());
 
 
 
@@ -95,8 +185,24 @@
 //60s should be D 
 //and anything below 60 should be F
   
-
+var grades = Math.floor(Math.random() * 100) + 1;{
+ 
+}
   
+    if(grades <= 59){
+        console.log("F");
+    }else if(grades == 60 || grades <=69){
+        console.log("D");
+    }else if(grades == 70 || grades <=79){
+        console.log("C");
+    }else if(grades == 80 || grades <=89){
+        console.log("B");
+    }else if(grades == 90 || grades <=100){
+        console.log("A");
+        
+    }
+
+        console.log(grades);  
   
 
 /************************************************************** Stretch **************************************************************/
